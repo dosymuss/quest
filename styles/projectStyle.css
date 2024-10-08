@@ -450,6 +450,9 @@ header {
   }
 }
 
+.quest-buy {
+  display: none;
+}
 @media (max-width: 450px) {
   .quest-buy {
     border-radius: 7px 7px 0 0;
