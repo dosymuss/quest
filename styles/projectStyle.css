@@ -1,0 +1,494 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+header {
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.navbar {
+  background-color: transparent;
+  background: #fff;
+}
+
+.navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+}
+.navbar-nav .nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+.navbar-nav .nav-link {
+  padding: 0;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 110%;
+  text-align: center;
+  color: #383838;
+}
+
+.order-mobile {
+  display: none;
+}
+@media (max-width: 990px) {
+  .order-mobile {
+    display: block;
+  }
+}
+
+.navbar-toggler {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.container {
+  padding: 0 100px;
+}
+@media (max-width: 990px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.breadcrumps {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #424242;
+  letter-spacing: 0.2em;
+  margin: 24px 0 32px;
+}
+@media (max-width: 990px) {
+  .breadcrumps {
+    display: none;
+  }
+}
+
+.quest-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 990px) {
+  .quest-card .container {
+    padding: 0;
+  }
+}
+
+.quest-card__info {
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  width: 831px;
+  height: 361px;
+  padding: 32px 30px;
+  background: -webkit-gradient(linear, left top, right top, from(#fff), to(rgba(255, 255, 255, 0))), url("../assets/quest/backImg.svg");
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%), url("../assets/quest/backImg.svg");
+  background-color: white;
+  background-size: 510px 361px; /* Измените на contain, если хотите, чтобы изображение было полностью видно */
+  background-position: top right;
+  background-repeat: no-repeat;
+  position: relative;
+}
+@media (max-width: 990px) {
+  .quest-card__info {
+    border-radius: 0px;
+    padding: 330px 12px 25px;
+    height: 650px;
+    text-align: center;
+    background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(rgba(255, 255, 255, 0))), url("../assets/quest/backMob.svg");
+    background: linear-gradient(360deg, #fff 0%, rgba(255, 255, 255, 0) 100%), url("../assets/quest/backMob.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 100vw;
+  }
+}
+
+.quest-card__popular {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+  padding: 4px 10px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 110%;
+  color: #383838;
+  position: absolute;
+  top: 11px;
+  right: 14px;
+}
+@media (max-width: 990px) {
+  .quest-card__popular {
+    top: 6px;
+    left: 6px;
+    width: 117px;
+  }
+}
+
+.quest-card__title {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 120%;
+  color: #424242;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 990px) {
+  .quest-card__title {
+    font-size: 28px;
+  }
+}
+
+.quest-card__tag-and-desc {
+  width: 297px;
+  margin-top: 19px;
+}
+@media (max-width: 990px) {
+  .quest-card__tag-and-desc {
+    width: 100%;
+  }
+}
+
+.quest-card__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (max-width: 990px) {
+  .quest-card__tags {
+    padding: 0 52px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.quest-card__tags .quest-card__tag {
+  background: rgba(28, 28, 28, 0.05);
+  border-radius: 3px;
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  text-align: center;
+  color: #383838;
+}
+
+.quest-card__description {
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #424242;
+  text-wrap: balance;
+}
+
+/* Дополнительные стили для отсутствующих элементов */
+.quest-card__purchase {
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 261px;
+  height: 229px;
+  text-align: center;
+}
+@media (max-width: 990px) {
+  .quest-card__purchase {
+    display: none;
+  }
+}
+
+.quest-card__payment-info > p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 130%;
+  color: rgba(56, 56, 56, 0.8);
+}
+
+.quest-card__payment-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 18px;
+  margin: 8px 0 24px;
+}
+
+.quest-card__payment-icon {
+  width: 50px;
+  height: auto;
+}
+
+.quest-card__foreign-payment {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+  color: #383838;
+  text-wrap: wrap;
+}
+.quest-card__foreign-payment a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #dd4e00;
+}
+
+.quest-card__buy-button {
+  border-radius: 8px;
+  width: 219px;
+  height: 52px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #fff;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(188, 66, 0, 0.15);
+          box-shadow: 0 1px 3px 1px rgba(188, 66, 0, 0.15);
+  background: #ff8000;
+}
+
+.quest-card__buy-button:hover {
+  background-color: #ff5a00;
+}
+
+.quest-card__price {
+  font-weight: 700;
+}
+
+.reviews-container {
+  padding-bottom: 20px;
+  background-color: #f5f5f5; /* Цвет фона для блока */
+  border-radius: 8px; /* Закругления углов блока */
+}
+
+.reviews-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 48px 0 24px;
+}
+.reviews-title h2 {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 120%;
+  color: #424242;
+}
+.reviews-title span {
+  line-height: 120%;
+  color: #424242;
+  font-weight: 400;
+  font-size: 16px;
+}
+@media (max-width: 450px) {
+  .reviews-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.reviews {
+  width: 831px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  padding-right: 24px;
+}
+@media (max-width: 450px) {
+  .reviews {
+    width: 100vw;
+  }
+}
+
+.review-card {
+  border-radius: 8px;
+  padding: 30px 24px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 261px; /* Убедитесь, что это значение корректно */
+  height: 432px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* Включите это, чтобы избежать проблем с шириной */
+}
+.review-card .review-date {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 130%;
+  color: #868686;
+  margin-bottom: 16px;
+}
+.review-card h3 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  color: #383838;
+  margin-top: 16px;
+}
+.review-card h5 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: #383838;
+  margin-top: 12px;
+}
+.review-card p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #5e5e5e;
+}
+
+.review-info {
+  margin-bottom: 10px; /* Отступ снизу информации об отзыве */
+}
+
+.review-rating {
+  margin: 10px 0; /* Отступ сверху и снизу рейтинга */
+}
+
+.see-all-reviews {
+  width: 831px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 24px;
+}
+.see-all-reviews a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 16px 24px;
+  width: 437px;
+  height: 52px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  background: #ff8000;
+}
+@media (max-width: 450px) {
+  .see-all-reviews {
+    width: 100%;
+  }
+  .see-all-reviews a {
+    width: 100%;
+    height: 52px;
+  }
+}
+
+@media (max-width: 450px) {
+  .quest-buy {
+    border-radius: 7px 7px 0 0;
+    padding: 10px 12px;
+    width: 100%;
+    height: 72px;
+    -webkit-box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .quest-buy a {
+    border-radius: 7px;
+    padding: 16px 24px;
+    width: 100%;
+    height: 52px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    color: #fff;
+    text-decoration: none;
+    background-color: #ff8000;
+  }
+}

@@ -1,0 +1,416 @@
+@import "./index.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font1;
+}
+
+body {
+  background-color: $color-background;
+}
+
+header {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.navbar {
+  background-color: transparent;
+  background: #fff;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .nav-link {
+    padding: 0;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 110%;
+    text-align: center;
+    color: #383838;
+  }
+}
+
+.order-mobile {
+  display: none;
+
+  @media (max-width: 990px) {
+    display: block;
+  }
+}
+
+.navbar-toggler {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.container {
+  padding: 0 100px;
+
+  @media (max-width: 990px) {
+    padding: 0 10px;
+  }
+}
+
+.breadcrumps {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: $color-text;
+  letter-spacing: 0.2em;
+  margin: 24px 0 32px;
+
+  @media (max-width: 990px) {
+    display: none;
+  }
+}
+
+.quest-card {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 990px) {
+    & .container {
+      padding: 0;
+    }
+  }
+}
+
+.quest-card__info {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  width: 831px;
+  height: 361px;
+  padding: 32px 30px;
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%),
+    url("../assets/quest/backImg.svg");
+  background-color: white;
+  background-size: 510px 361px; /* Измените на contain, если хотите, чтобы изображение было полностью видно */
+  background-position: top right;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @media (max-width: 990px) {
+    border-radius: 0px;
+    padding: 330px 12px 25px;
+    height: 650px;
+    text-align: center;
+    background: linear-gradient(360deg, #fff 0%, rgba(255, 255, 255, 0) 100%),
+      url("../assets/quest/backMob.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 100vw;
+  }
+}
+
+.quest-card__popular {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+  padding: 4px 10px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 110%;
+  color: #383838;
+  position: absolute;
+  top: 11px;
+  right: 14px;
+
+  @media (max-width: 990px) {
+    top: 6px;
+    left: 6px;
+    width: 117px;
+  }
+}
+
+.quest-card__title {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 120%;
+  color: $color-text;
+  position: relative;
+  z-index: 2;
+  @media (max-width: 990px) {
+    font-size: 28px;
+  }
+}
+
+.quest-card__tag-and-desc {
+  width: 297px;
+  margin-top: 19px;
+  @media (max-width: 990px) {
+    width: 100%;
+  }
+}
+
+.quest-card__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+
+  @media (max-width: 990px) {
+    padding: 0 52px;
+    justify-content: center;
+  }
+
+  .quest-card__tag {
+    background: rgba(28, 28, 28, 0.05);
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    text-align: center;
+    color: #383838;
+  }
+}
+
+.quest-card__description {
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: $color-text;
+  text-wrap: balance;
+}
+
+/* Дополнительные стили для отсутствующих элементов */
+.quest-card__purchase {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 261px;
+  height: 229px;
+  text-align: center;
+  @media (max-width: 990px) {
+    display: none;
+  }
+}
+
+.quest-card__payment-info {
+  & > p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    color: rgba(56, 56, 56, 0.8);
+  }
+}
+
+.quest-card__payment-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 8px 0 24px;
+}
+
+.quest-card__payment-icon {
+  width: 50px;
+  height: auto;
+}
+
+.quest-card__foreign-payment {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+  color: #383838;
+  text-wrap: wrap;
+  & a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    text-decoration-skip-ink: none;
+    color: #dd4e00;
+  }
+}
+
+.quest-card__buy-button {
+  border-radius: 8px;
+  width: 219px;
+  height: 52px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #fff;
+  box-shadow: 0 1px 3px 1px rgba(188, 66, 0, 0.15);
+  background: $orange;
+}
+
+.quest-card__buy-button:hover {
+  background-color: #ff5a00;
+}
+
+.quest-card__price {
+  font-weight: 700;
+}
+
+.reviews-container {
+  padding-bottom: 20px;
+  background-color: #f5f5f5; /* Цвет фона для блока */
+  border-radius: 8px; /* Закругления углов блока */
+}
+
+.reviews-title {
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+  margin: 48px 0 24px;
+  & h2 {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 120%;
+    color: #424242;
+  }
+  & span {
+    line-height: 120%;
+    color: #424242;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  @media (max-width: 450px) {
+    flex-direction: column;
+  }
+}
+
+.reviews {
+  width: 831px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  @media (max-width: 450px) {
+    width: 100vw;
+  }
+}
+
+.review-card {
+  border-radius: 8px;
+  padding: 30px 24px;
+  flex-shrink: 0;
+  width: 261px; /* Убедитесь, что это значение корректно */
+  height: 432px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+  background: #fff;
+  box-sizing: border-box; /* Включите это, чтобы избежать проблем с шириной */
+
+  & .review-date {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    color: #868686;
+    margin-bottom: 16px;
+  }
+  & h3 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    color: #383838;
+    margin-top: 16px;
+  }
+  & h5 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: #383838;
+    margin-top: 12px;
+  }
+  & p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #5e5e5e;
+  }
+}
+
+.review-info {
+  margin-bottom: 10px; /* Отступ снизу информации об отзыве */
+}
+
+.review-rating {
+  margin: 10px 0; /* Отступ сверху и снизу рейтинга */
+}
+
+.see-all-reviews {
+  width: 831px;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    color: #fff;
+    text-decoration: none;
+
+    border-radius: 8px;
+    padding: 16px 24px;
+    width: 437px;
+    height: 52px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+    background: $orange;
+  }
+  @media (max-width: 450px) {
+    width: 100%;
+    & a {
+      width: 100%;
+      height: 52px;
+    }
+  }
+}
+
+.quest-buy {
+  @media (max-width: 450px) {
+    border-radius: 7px 7px 0 0;
+    padding: 10px 12px;
+    width: 100%;
+    height: 72px;
+    box-shadow: 0 -2px 3px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & a {
+      border-radius: 7px;
+      padding: 16px 24px;
+      width: 100%;
+      height: 52px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 125%;
+      letter-spacing: -0.01em;
+      color: #fff;
+      text-decoration: none;
+      background-color: $orange;
+    }
+  }
+}
